@@ -1,0 +1,65 @@
+@import "../../bootstrap-3.1.0/less/variables";
+
+html{
+  height: 100%;
+}
+body {
+  min-height: 100%;
+//  padding-top: 70px;
+  .full-background();
+  background-image: url("../img/_src/shutterstock_78457369.jpg");
+}
+
+section {
+  width: 100%;
+  height: 600px;
+}
+
+.full-background(){
+  background-size: cover;
+  background-position:50% 50%;
+}
+
+#home {
+  h1 {
+    font-family: 'motion_picture_personal_useRg';
+    font-size: 50px;
+    @media (min-width: @screen-sm-min) {
+      font-size: 100px;
+    }
+    text-align: center;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    color: white;
+  }
+  .name {
+    display: inline-block;
+    text-align: center;
+    padding: 0 0.2em;
+    font-size: 1.2em;
+  }
+  small {
+    display: block;
+    color: white;
+  }
+  .massive {
+    font-size: 2.1em;
+  }
+  .nospace {
+    line-height: 0;
+    display: inline-block;
+    margin-bottom: -1em;
+  }
+  .proudly {
+    font-family: 'chunkfiveroman';
+    font-size: 30%;
+  }
+
+}
+//main{
+//  position: absolute;
+//  height: 100%;
+//  width: 100%;
+//  overflow: auto;
+//  border-top: 40px solid;
+//  box-sizing: border-box;
+//}
