@@ -4,39 +4,42 @@
   <title>Kate and Dan's wedding - 9th August 2014</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
-  <link href="assets/bootstrap/css/bootstrap-theme.css" rel="stylesheet">
+  <!--<link href="assets/bootstrap/css/bootstrap-theme.css" rel="stylesheet">-->
   <link href="assets/site/font/stylesheet.css" rel="stylesheet">
   <link href="assets/site/css/styles.css" rel="stylesheet">
 </head>
-<body>
+<body class="night">
 
-
-<!--<div class="navbar navbar-default navbar-fixed-top" role="navigation">-->
-  <!--<div class="container">-->
-    <!--<div class="navbar-header">-->
-      <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">-->
-        <!--<span class="sr-only">Toggle navigation</span>-->
-        <!--<span class="icon-bar"></span>-->
-        <!--<span class="icon-bar"></span>-->
-        <!--<span class="icon-bar"></span>-->
-      <!--</button>-->
-    <!--</div>-->
-    <!--<div class="navbar-collapse collapse">-->
-      <!--<ul class="nav navbar-nav">-->
-        <!--<li><a href="#">Home</a></li>-->
-        <!--<li><a href="#church">Church</a></li>-->
-        <!--<li><a href="#">Reception</a></li>-->
-        <!--<li><a href="#">Hotels</a></li>-->
-        <!--<li><a href="#">Catering</a></li>-->
-      <!--</ul>-->
-    <!--</div>-->
-  <!--</div>-->
-<!--</div>-->
-
+<!--We can adjust the menu colour for each panel if we so desire.-->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#home" data-menu-top="0">Home</a></li>
+        <li class="day-only"><a href="#church" data-menu-top="100p">Church</a></li>
+        <li><a href="#reception" data-menu-top="200p">Reception</a></li>
+        <li><a href="#taxis" data-menu-top="300p">Taxis</a></li>
+        <li><a href="#hotels" data-menu-top="400p">Hotels</a></li>
+        <li><a href="#rsvp" data-menu-top="600p">RSVP</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
   <main>
 
-    <section class="" id="home">
+
+    <section id="home"
+             data-0="transform:translate(0,0%);opacity:1"
+             data-100p="transform:translate(0,100%);opacity:0">
       <h1>
         <span class="name">Kate <small>Parrin</small></span>
         <span class="massive nospace">&amp;</span>
@@ -46,39 +49,175 @@
       </h1>
     </section>
 
-    <section class="" id="church">
-      <h1>Church</h1>
-      <p>Lorem ipsum...</p>
+    <section id="church" class="church-only jumbotron"
+             data-50p="transform:translate(0,100%);"
+             data-100p="transform:translate(0,0%);"
+             data-150p=""
+             data-200p="transform:translate(0,-100%);">
+      <h1>Marriage Ceremony</h1>
+      <div class="row">
+        <div class="col-sm-5 col-sm-push-7 no-overflow">
+          <div id="church-height" data-110p="transform:translate(0,0%);" data-150p="transform:translate(0,-100%);">
+            <p>We are getting married at St Michael's Church in Offham (near West Malling)</p>
+            <address>Church Road, <br />Offham, <br />West Malling, <br />Kent <br />ME19 5NY</address>
+            <p><strong>The ceremony starts at 13.00, please arrive from 12.30</strong></p>
+            <p>Parking is quite limited, the farm next door (Laurence J Betts
+              Farm) have very kindly said we may use some of their space, but
+              please arrange to car share wherever possible.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="" id="reception">
+    <section id="reception" class="jumbotron"
+             data-150p="transform:translate(0,100%);"
+             data-200p="transform:translate(0,0%);"
+             data-250p=""
+             data-300p="transform:translate(0,-100%);">
       <h1>Reception</h1>
-      <p>Lorem ipsum...</p>
+      <div class="row">
+        <div class="col-md-3 col-md-push-1 no-overflow">
+          <div data-210p="transform:translate(0,0%);" data-250p="transform:translate(0,-100%);">
+            <p class="lead">Reception starts from 14.30. Evening guests may arrive from 7PM</p>
+
+            <p><a href="https://goo.gl/maps/rRmXJ" target="_blank" class="btn btn-info btn-block">Click here for directions from
+              <br/> the church to the venue</a></p>
+
+
+            <p><strong>Directions by car:</strong></p>
+            <p>From the north - take junction 5 off the M25 onto the A21 towards Hastings, take a left off at the A228 and head towards the Hop Farm, continue for 3.8 miles, straight over at the roundabout and then take the 2nd right after the railway arch into the venue site.</p>
+            <p>From the south - turn onto the A21 towards London, turn off at the A228 and head towards the Hop Farm, continue for 3.8 miles, straight over at the roundabout and then take the 2nd right after the railway arch into the venue site.</p>
+
+            <p><strong>Directions by public transport:</strong></p>
+            <p>Trains running from London Charing Cross, London Bridge or Victoria to Paddock Wood take approximately 40 minutes. From there the venue is less than 5 minutes away by taxi.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="" id="taxis">
+    <section id="taxis" class="jumbotron"
+             data-250p="transform:translate(0,100%);"
+             data-300p="transform:translate(0,0%);"
+             data-350p=""
+             data-400p="transform:translate(0,-100%);">
       <h1>Taxis</h1>
-      <p>Lorem ipsum...</p>
+      <div class="no-overflow">
+        <div class="row"
+             data-310p="transform:translate(0,0%);"
+             data-350p="transform:translate(0,-100%);">
+          <div class="col-md-6">
+            <div class="well">
+              <h2>Sapphire Cars</h2>
+              <p>Area: Maidstone</p>
+              <p>Tel: 01622 663 000 <br />
+                <a href="#">Website</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="well">
+              <h2>Express</h2>
+              <p>Area: Maidstone</p>
+              <p>Tel: 01622 222 222<br />
+                <a href="#">Website</a></p>
+            </div>
+          </div>
+
+
+          <div class="col-md-6">
+            <div class="well">
+              <h2>Streamline</h2>
+              <p>Area: Paddock Wood</p>
+              <p>Tel: 01892 838 383<br />
+                <a href="#">Website</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="well">
+              <h2>Walkers Cars</h2>
+              <p>Area: Tunbridge Wells</p>
+              <p>Tel: 01892 522 522<br />
+                <a href="#">Website</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="" id="hotels">
+    <section class="jumbotron" id="hotels"
+             data-350p="transform:translate(0,100%);"
+             data-400p="transform:translate(0,0%);"
+             data-450p=""
+             data-500p="transform:translate(0,-100%);">
       <h1>Hotels</h1>
-      <p>Lorem ipsum...</p>
+      <div class="well">
+        <table class="table table-bordered">
+          <thead>
+          <tr>
+            <th>Location</th>
+          </tr>
+          </thead>
+          <tr>
+            <td>Hadlow Manor Hotel</td>
+          </tr>
+          <tr><td>The Mercure Hotel, Tunbridge Wells</td></tr>
+          <tr><td>The Royal Spa Hotel, Tunbridge Wells</td></tr>
+          <tr><td>Holiday Inn, Sevenoaks</td></tr>
+          <tr><td>Premier Inn, Sevenoaks/Maidstone</td></tr>
+          <tr><td>Birling House Bed And Breakfast</td></tr>
+          <tr><td>Warrington Lodge B&B, Paddock Wood</td></tr>
+          <tr><td>Little Fowle Hall Oast B&B</td></tr>
+          <tr><td>Camping</td></tr>
+        </table>
+      </div>
     </section>
 
-    <section class="" id="gifts">
-      <h1>Gifts</h1>
-      <p>Lorem ipsum</p>
-    </section>
-
-    <section class="" id="rsvp">
+    <section class="jumbotron" id="rsvp"
+             data-450p="transform:translate(0,100%);"
+             data-500p="transform:translate(0,0%);"
+             data-600p=""
+             >
       <h1>RSVP</h1>
-      <form action="https://docs.google.com/forms/d/1filhNnsDTjTD6ys9f-vOCdwMf7161uTysui9zPGdVI4/formResponse" method="POST" id="ss-form" target="_self" onsubmit=""><ol style="padding-left: 0">
+      <form action="https://docs.google.com/forms/d/1filhNnsDTjTD6ys9f-vOCdwMf7161uTysui9zPGdVI4/formResponse" method="POST" role="form" class="well">
+        <div>
+
+          <p>Will you be able to attend our wedding?</p>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <button type="button" class="btn btn-primary form-control yes">Yes!</button>
+                <input type="radio" name="entry.490232376" value="Yes" role="radio" aria-label="Yes" class="js-hide">
+              </div>
+
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <button type="button" class="btn btn-primary form-control no">No!</button>
+                <input type="radio" name="entry.490232376" value="No" role="radio" aria-label="No"  class="js-hide">
+              </div>
+            </div>
+          </div>
+          <div class="respondees row js-hide">
+            <div class="col-xs-12">
+              <div class="form-group">
+                <label for="entry_1298673016">Your name</label>
+                <textarea name="entry.1298673016" rows="8" cols="0" class="form-control" id="entry_1298673016"></textarea>
+                <p class="help-block">Enter the names for all the people you are replying for, one per line please.</p>
+              </div>
+              <p>
+                <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <ol style="padding-left: 0">
         <div class="ss-form-question errorbox-good">
           <div dir="ltr" class="ss-item  ss-paragraph-text"><div class="ss-form-entry"><label aria-hidden="true" class="ss-q-item-label" for="entry_1298673016"><div class="ss-q-title">Name
           </div>
             <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-            <textarea name="entry.1298673016" rows="8" cols="0" class="ss-q-long" id="entry_1298673016" dir="auto" aria-label="Name  "></textarea>
+            </textarea>
             <div class="error-message"></div>
             <div class="required-message">This is a required question</div>
 
@@ -87,9 +226,19 @@
         </div>
           <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
 
-          <ul class="ss-choices" role="radiogroup" aria-label="Are you coming?  "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.490232376" value="Yes" id="group_490232376_1" role="radio" class="ss-q-radio" aria-label="Yes"></span>
+          <!--<ul class="ss-choices" role="radiogroup" aria-label="Are you coming?  "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block">
+
+
+
+          </span>-->
             <span class="ss-choice-label">Yes</span>
-          </label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.490232376" value="No" id="group_490232376_2" role="radio" class="ss-q-radio" aria-label="No"></span>
+          <!--</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block">
+
+
+
+
+
+          </span>-->
             <span class="ss-choice-label">No</span>
           </label></li></ul>
           <div class="error-message"></div>
@@ -104,7 +253,7 @@
 
         </div></div></div>
         <input type="hidden" name="draftResponse" value="[,,&quot;-9168231691549335&quot;]
-  ">
+
         <input type="hidden" name="pageHistory" value="0">
         <input type="hidden" name="fromEmail" value="false">
 
@@ -118,8 +267,11 @@
   </main>
   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
   <script src="assets/bootstrap/js/bootstrap.js"></script>
-  <script type="text/javascript" src="assets/superscrollorama/js/greensock/TweenMax.min.js"></script>
-  <script src="assets/superscrollorama/js/jquery.superscrollorama.js"></script>
+
+
+
+  <script src="assets/skrollr-master/src/skrollr.js"></script>
+  <script src="assets/skrollr-menu-master/src/skrollr.menu.js"></script>
   <script src="assets/site/js/site.js"></script>
 </body>
 </html>
