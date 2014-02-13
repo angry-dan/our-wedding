@@ -34,6 +34,12 @@ section {
   height: 100%;
   overflow: hidden;
 
+  // Borrowed from .jumbotron
+  padding: 48px 30px 48px 30px;
+  margin-bottom: 30px;
+  h1 {
+    font-size: 63px;
+  }
 }
 .no-overflow {
   overflow: hidden;
@@ -136,16 +142,35 @@ h1 {
     font-family: 'chunkfiveroman';
     font-size: 30%;
   }
+}
 
+#date {
+  display: table;
+  p {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 50px;
+    @media (min-width: @screen-sm-min) {
+      font-size: 100px;
+    }
+    text-shadow: black 0.1em 0.1em 0.2em;
+    color: white;
+    text-transform: uppercase;
+  }
 }
 
 #church {
-  background-size: 80%;
-  background-position: left -100px bottom;
-  background-image: url("../img/_src/164718775.jpg");
-  color: white;
+  background-size: contain;
+  background-position: left bottom;
+  background-image: url("../img/church.jpg");
+  h1 {
+    color: white;
+  }
+  letter-spacing: 1px;
+  color: #ECECEC;
   background-repeat: no-repeat;
-  background-color: red;
+  background-color: #E6537C;
 }
 
 #taxis {
@@ -169,6 +194,12 @@ h1 {
 
     color: white;
   }
+  p {
+    text-shadow: white 0px 0px 10px;
+    .btn{
+      text-shadow: none;
+    }
+  }
 }
 
 #gifts {
@@ -189,6 +220,9 @@ h1 {
 }
 
 #rsvp {
+  &.skrollable-after {
+    display: block;
+  }
   background: none;
     color: white;
   form {
