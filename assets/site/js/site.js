@@ -1,6 +1,8 @@
 !function(){
 
-  var s = skrollr.init();
+  var s = skrollr.init({
+    scale: 15
+  });
   skrollr.menu.init(s);
 
   jQuery.fn.scope = function() {

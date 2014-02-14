@@ -3256,12 +3256,20 @@ body {
   background-image: url("../img/main-background.jpg");
   background-attachment: fixed;
   overflow-x: hidden;
-  font-family: 'chunkfiveroman';
+  font-family: 'Gabriela', serif;
 }
 @media (min-width: 767px) {
   body {
     padding-top: 50px;
   }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'chunkfiveroman';
 }
 body.js .js-hide {
   display: none;
@@ -3367,7 +3375,7 @@ h1 {
 #date {
   display: table;
 }
-#date p {
+#date h2 {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
@@ -3377,7 +3385,7 @@ h1 {
   text-transform: uppercase;
 }
 @media (min-width: 768px) {
-  #date p {
+  #date h2 {
     font-size: 100px;
   }
 }
@@ -3385,7 +3393,6 @@ h1 {
   background-size: contain;
   background-position: left bottom;
   background-image: url("../img/church.jpg");
-  letter-spacing: 1px;
   color: #ECECEC;
   background-repeat: no-repeat;
   background-color: #E6537C;

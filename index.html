@@ -3,7 +3,10 @@
 <head>
   <title>Kate and Dan's wedding - 9th August 2014</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--Fonts-->
   <link href="assets/site/font/stylesheet.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Gabriela' rel='stylesheet' type='text/css'>
+  <!--Styles-->
   <link href="assets/site/css/styles.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
@@ -23,11 +26,11 @@
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li><a href="#home" data-menu-top="0">Home</a></li>
-        <li class="day-only"><a href="#church" data-menu-top="100p">Church</a></li>
-        <li><a href="#reception" data-menu-top="200p">Reception</a></li>
-        <li><a href="#taxis" data-menu-top="300p">Taxis</a></li>
-        <li><a href="#hotels" data-menu-top="400p">Hotels</a></li>
-        <li><a href="#rsvp" data-menu-top="600p">RSVP</a></li>
+        <li class="day-only"><a href="#church" data-menu-top="100">Church</a></li>
+        <li><a href="#reception" data-menu-top="200">Reception</a></li>
+        <li><a href="#taxis" data-menu-top="300">Taxis</a></li>
+        <li><a href="#hotels" data-menu-top="400">Hotels</a></li>
+        <li><a href="#rsvp" data-menu-top="600">RSVP</a></li>
       </ul>
     </div>
   </div>
@@ -36,7 +39,7 @@
   <main>
     <section id="home"
              data-0="transform:translate(0,0%);opacity:1"
-             data-50p="transform:translate(0,100%);opacity:0">
+             data-50="transform:translate(0,100%);opacity:0">
       <h1>
         <span class="name">Kate <small>Parrin</small></span>
         <span class="massive nospace">&amp;</span>
@@ -47,21 +50,21 @@
     </section>
 
     <section id="date"
-             data-10p="transform:scale(0.1); opacity:0"
-             data-50p="transform:scale(1); opacity:1;"
-             data-60p=""
-             data-75p="transform:scale(10); opacity:0">
-      <p>Saturday <br/>9th August <br/>2014</p>
+             data-10="transform:scale(0.1); opacity:0"
+             data-50="transform:scale(1); opacity:1;"
+             data-70=""
+             data-100="transform:scale(10); opacity:0">
+      <h2>Saturday <br/>9th August <br/>2014</h2>
     </section>
 
     <section id="church" class="church-only jumbotron"
-             data-60p="transform:translate(0,100%);"
-             data-100p="transform:translate(0,0%);"
-             data-200p="">
+             data-70="transform:translate(0,100%);"
+             data-100="transform:translate(0,0%);"
+             data-200="">
       <h1>Marriage Ceremony</h1>
       <div class="row">
         <div class="col-sm-5 col-sm-push-7 no-overflow">
-          <div id="church-height" data-110p="transform:translate(0,0%);" data-150p="transform:translate(0,-100%);">
+          <div id="church-height" data-110="transform:translate(0,0%);" data-150="transform:translate(0,-100%);">
             <p>We are getting married at St Michael's Church in Offham (near West Malling)</p>
             <address>Church Road, <br />Offham, <br />West Malling, <br />Kent <br />ME19 5NY</address>
             <p><strong>The ceremony starts at 13.00, please arrive from 12.30</strong></p>
@@ -74,13 +77,13 @@
     </section>
 
     <section id="reception" class="jumbotron"
-             data-150p="transform:translate(0,100%);"
-             data-200p="transform:translate(0,0%);"
-             data-300p="">
+             data-150="transform:translate(0,100%);"
+             data-200="transform:translate(0,0%);"
+             data-300="">
       <h1>Reception</h1>
       <div class="row">
         <div class="col-md-3 col-md-push-1 no-overflow">
-          <div data-210p="transform:translate(0,0%);" data-250p="transform:translate(0,-100%);">
+          <div data-210="transform:translate(0,0%);" data-250="transform:translate(0,-100%);">
             <p class="lead">Reception starts from 14.30. Evening guests may arrive from 7PM</p>
 
             <p><a href="https://goo.gl/maps/rRmXJ" target="_blank" class="btn btn-info btn-block">Click here for directions from
@@ -99,14 +102,14 @@
     </section>
 
     <section id="taxis" class=""
-             data-250p="transform:translate(0,100%);"
-             data-300p="transform:translate(0,0%);"
-             data-400p="">
+             data-250="transform:translate(0,100%);"
+             data-300="transform:translate(0,0%);"
+             data-400="">
       <h1>Taxis</h1>
       <div class="no-overflow">
         <div class="row"
-             data-310p="transform:translate(0,0%);"
-             data-350p="transform:translate(0,-100%);">
+             data-310="transform:translate(0,0%);"
+             data-350="transform:translate(0,-100%);">
           <div class="col-md-6">
             <div class="well">
               <h2>Sapphire Cars</h2>
@@ -148,10 +151,10 @@
     </section>
 
     <section class="jumbotron" id="hotels"
-             data-350p="transform:translate(0,100%);"
-             data-400p="transform:translate(0,0%);"
-             data-450p=""
-             data-500p="transform:translate(0,-100%);">
+             data-350="transform:translate(0,100%);"
+             data-400="transform:translate(0,0%);"
+             data-450=""
+             data-500="transform:translate(0,-100%);">
       <h1>Hotels</h1>
       <div class="well">
         <table class="table table-bordered">
@@ -176,9 +179,8 @@
     </section>
 
     <section class="jumbotron" id="rsvp"
-             data-450p="transform:translate(0,100%);"
-             data-500p="transform:translate(0,0%);"
-             data-600p=""
+             data-450="z-index:90"
+             data-600=""
              >
       <h1>RSVP</h1>
       <form action="https://docs.google.com/forms/d/1filhNnsDTjTD6ys9f-vOCdwMf7161uTysui9zPGdVI4/formResponse" method="POST" role="form" class="well">
