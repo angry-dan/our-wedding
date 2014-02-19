@@ -1,9 +1,15 @@
 @import "bootstrap";
 
-main>.skrollable-before,
-main>.skrollable-after {
-  display: none;
-}
+@icon-font-path:          "../../bootstrap-3.1.0/fonts/";
+
+@well-bg: #DFD9B0;
+
+@btn-default-bg:                 #C9C942;
+@btn-default-color:              white;
+
+@btn-success-bg:                 #37B737;
+@btn-danger-bg:                  #D2322D;
+
 
 .night .day-only {
   display: none !important;
@@ -37,17 +43,19 @@ section {
   height: 100%;
   overflow: hidden;
 
-  // Borrowed from .jumbotron
-  padding: 48px 30px 48px 30px;
-  margin-bottom: 30px;
-  h1 {
-    font-size: 63px;
+  padding: 10px;
+  margin-bottom: 5px;
+
+  @media (min-width: 767px) {
+    // Borrowed from .jumbotron
+    padding: 48px 30px 48px 30px;
+    margin-bottom: 30px;
+    h1 {
+      font-size: 63px;
+    }
   }
 }
-.no-overflow {
-  overflow: hidden;
-  padding-bottom: 100%;
-}
+
 .skrollable {
   /*
    * First-level skrollables are positioned relative to window
@@ -58,20 +66,23 @@ section {
    * Skrollables by default have a z-index of 100 in order to make it easy to position elements in front/back without changing each skrollable
    */
   z-index:100;
+
+  .no-overflow {
+    overflow: hidden;
+    padding-bottom: 100%;
+  }
+
+  .skrollable {
+    // Second-level skrollables are positioned relative their parent skrollable.
+    // Since I'm using transforms I can use static rather than absolute
+    // positioning and not break layout.
+    position:static;
+  }
 }
 
-.skrollr-mobile .skrollable {
-  /*
-      May cause issues on Android default browser (see #331 on GitHub).
-  */
-  position:absolute;
-}
-
-.skrollable .skrollable {
-  // Second-level skrollables are positioned relative their parent skrollable.
-  // Since I'm using transforms I can use static rather than absolute
-  // positioning and not break layout.
-  position:static;
+main>.skrollable-before,
+main>.skrollable-after {
+  visibility: hidden;
 }
 
 // For mobile - hide the navbar's background.
@@ -103,6 +114,31 @@ h1 {
   color: white;
   font-size: 50px;
   text-shadow: black 0.1em 0.1em 0.2em;
+  margin-top: 0;
+  @media (min-width: 767px) {
+    margin-top: 20px;
+  }
+}
+
+.white-text() {
+  color: #ECECEC;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+.dark-text() {
+  color: #333333;
+  text-shadow:
+    -1px -1px 0 #eee,
+    1px -1px 0 #eee,
+    -1px 1px 0 #eee,
+    1px 1px 0 #eee;
+
+  .btn{
+    text-shadow: none;
+  }
 }
 
 #home {
@@ -170,7 +206,7 @@ h1 {
   h1 {
     color: white;
   }
-  color: #ECECEC;
+  .white-text();
   background-repeat: no-repeat;
   background-color: #E6537C;
 }
@@ -181,27 +217,15 @@ h1 {
   h1 {
     color: white;
   }
-//  display: table;
-//  .row {
-//    width: 100%;
-//    display: table-cell;
-//    vertical-align: middle;
-//  }
 }
 
 #reception {
   .full-background;
   background-image: url("../img/reception.jpg");
   h1 {
-
     color: white;
   }
-  p {
-    text-shadow: white 0px 0px 10px;
-    .btn{
-      text-shadow: none;
-    }
-  }
+  .dark-text();
 }
 
 #gifts {
@@ -223,21 +247,70 @@ h1 {
 
 #rsvp {
   &.skrollable-after {
-    display: block;
+    visibility: visible;
   }
-  background: none;
-    color: white;
   form {
-    background-color: rgba(0,0,0,0.7);
+    //background-color: rgba(0,0,0,0.7);
   }
 }
 
+.spin-container {
+  position: relative;
 
-//main{
-//  position: absolute;
-//  height: 100%;
-//  width: 100%;
-//  overflow: auto;
-//  border-top: 40px solid;
-//  box-sizing: border-box;
-//}
+  .spin-position {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    .translate(0px, -50%);
+    z-index: 1;
+  }
+  .spin-text {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+// add padding to the container
+// fade the inner spinner in.
+// slide the glyphicon from the right - the overflow hidden will finish the effect.
+// since you'll be using a transform anyway it will act as a mask.
+
+
+
+.spin {
+  -webkit-animation: spin 1s infinite linear;
+  -moz-animation: spin 1s infinite linear;
+  -o-animation: spin 1s infinite linear;
+  animation: spin 1s infinite linear;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin:50% 50%;
+  -ms-transform-origin:50% 50%; /* IE 9 */
+}
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -30,7 +30,7 @@
         <li><a href="#reception" data-menu-top="200">Reception</a></li>
         <li><a href="#taxis" data-menu-top="300">Taxis</a></li>
         <li><a href="#hotels" data-menu-top="400">Hotels</a></li>
-        <li><a href="#rsvp" data-menu-top="600">RSVP</a></li>
+        <li><a href="#rsvp" data-menu-top="500">RSVP</a></li>
       </ul>
     </div>
   </div>
@@ -50,14 +50,14 @@
     </section>
 
     <section id="date"
-             data-10="transform:scale(0.1); opacity:0"
+             data-10="transform:scale(0.1); opacity:0; visibility: visible;"
              data-50="transform:scale(1); opacity:1;"
              data-70=""
-             data-100="transform:scale(10); opacity:0">
+             data-100="transform:scale(10); opacity:0; visibility: hidden;">
       <h2>Saturday <br/>9th August <br/>2014</h2>
     </section>
 
-    <section id="church" class="church-only jumbotron"
+    <section id="church" class="church-only"
              data-70="transform:translate(0,100%);"
              data-100="transform:translate(0,0%);"
              data-200="">
@@ -76,7 +76,7 @@
       </div>
     </section>
 
-    <section id="reception" class="jumbotron"
+    <section id="reception"
              data-150="transform:translate(0,100%);"
              data-200="transform:translate(0,0%);"
              data-300="">
@@ -128,7 +128,6 @@
             </div>
           </div>
 
-
           <div class="col-md-6">
             <div class="well">
               <h2>Streamline</h2>
@@ -150,7 +149,7 @@
       </div>
     </section>
 
-    <section class="jumbotron" id="hotels"
+    <section id="hotels"
              data-350="transform:translate(0,100%);"
              data-400="transform:translate(0,0%);"
              data-450=""
@@ -178,26 +177,31 @@
       </div>
     </section>
 
-    <section class="jumbotron" id="rsvp"
+    <section id="rsvp"
              data-450="z-index:90"
-             data-600=""
-             >
+             data-460="">
       <h1>RSVP</h1>
-      <form action="https://docs.google.com/forms/d/1filhNnsDTjTD6ys9f-vOCdwMf7161uTysui9zPGdVI4/formResponse" method="POST" role="form" class="well">
-        <div>
 
+      <div class="no-overflow">
+
+        <div class="well"
+             data-510="transform:translate(0,0%);"
+             data-550="transform:translate(0,-100%);">
+
+          <form action="https://docs.google.com/forms/d/1filhNnsDTjTD6ys9f-vOCdwMf7161uTysui9zPGdVI4/formResponse"
+              method="POST" role="form">
           <p>Will you be able to attend our wedding?</p>
           <div class="row">
             <div class="col-sm-6">
               <div class="form-group">
-                <button type="button" class="btn btn-primary form-control yes">Yes!</button>
+                <button type="button" class="btn btn-default form-control yes">Yes please!</button>
                 <input type="radio" name="entry.490232376" value="Yes" role="radio" aria-label="Yes" class="js-hide">
               </div>
 
             </div>
             <div class="col-sm-6">
               <div class="form-group">
-                <button type="button" class="btn btn-primary form-control no">No!</button>
+                <button type="button" class="btn btn-default form-control no">Sorry, but no</button>
                 <input type="radio" name="entry.490232376" value="No" role="radio" aria-label="No"  class="js-hide">
               </div>
             </div>
@@ -205,75 +209,25 @@
           <div class="respondees row js-hide">
             <div class="col-xs-12">
               <div class="form-group">
-                <label for="entry_1298673016">Your name</label>
+                <label for="entry_1298673016">Names of all guests:</label>
                 <textarea name="entry.1298673016" rows="8" cols="0" class="form-control" id="entry_1298673016"></textarea>
-                <p class="help-block">Enter the names for all the people you are replying for, one per line please.</p>
+                <p class="help-block">Please let us know the names of everybody who will be coming, one per line please.</p>
               </div>
               <p>
                 <button type="submit" name="submit" class="btn btn-primary">Submit</button>
               </p>
             </div>
           </div>
+        </form>
         </div>
 
-        <ol style="padding-left: 0">
-        <div class="ss-form-question errorbox-good">
-          <div dir="ltr" class="ss-item  ss-paragraph-text"><div class="ss-form-entry"><label aria-hidden="true" class="ss-q-item-label" for="entry_1298673016"><div class="ss-q-title">Name
-          </div>
-            <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-            </textarea>
-            <div class="error-message"></div>
-            <div class="required-message">This is a required question</div>
-
-          </div></div></div> <div class="ss-form-question errorbox-good">
-        <div dir="ltr" class="ss-item  ss-radio"><div class="ss-form-entry"><label aria-hidden="true" class="ss-q-item-label" for="entry_2073293959"><div class="ss-q-title">Are you coming?
-        </div>
-          <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-
-          <!--<ul class="ss-choices" role="radiogroup" aria-label="Are you coming?  "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block">
-
-
-
-          </span>-->
-            <span class="ss-choice-label">Yes</span>
-          <!--</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block">
-
-
-
-
-
-          </span>-->
-            <span class="ss-choice-label">No</span>
-          </label></li></ul>
-          <div class="error-message"></div>
-          <div class="required-message">This is a required question</div>
-        </div></div></div> <div class="ss-form-question errorbox-good">
-        <div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry"><label aria-hidden="true" class="ss-q-item-label" for="entry_815852803"><div class="ss-q-title">
-        </div>
-          <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-          <input type="text" name="entry.815852803" value="" class="ss-q-short" id="entry_815852803" dir="auto" aria-label="  " title="">
-          <div class="error-message"></div>
-          <div class="required-message">This is a required question</div>
-
-        </div></div></div>
-        <input type="hidden" name="draftResponse" value="[,,&quot;-9168231691549335&quot;]
-
-        <input type="hidden" name="pageHistory" value="0">
-        <input type="hidden" name="fromEmail" value="false">
-
-        <input type="hidden" name="fbzx" value="-9168231691549335">
-
-        <div class="ss-item ss-navigate"><table id="navigation-table"><tbody><tr><td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
-          <input type="submit" name="submit" value="Submit" id="ss-submit">
-          <div class="ss-secondary-text">Never submit passwords through Google Forms.</div></td>
-        </tr></tbody></table></div></ol></form>
+      </div>
     </section>
   </main>
   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
   <script src="assets/bootstrap-3.1.0/dist/js/bootstrap.min.js"></script>
-
-
-
+  <script src="assets/site/js/jquery.form.js"></script>
   <script src="assets/skrollr-master/dist/skrollr.min.js"></script>
   <script src="assets/skrollr-menu-master/dist/skrollr.menu.min.js"></script>
   <script src="assets/site/js/site.js"></script>
