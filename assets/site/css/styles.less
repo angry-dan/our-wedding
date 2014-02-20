@@ -1,8 +1,10 @@
 @import "bootstrap";
 
+@font-size-base:          18px;
+
 @icon-font-path:          "../../bootstrap-3.1.0/fonts/";
 
-@well-bg: #DFD9B0;
+@well-bg: #FFE35B;
 
 @btn-default-bg:                 #C9C942;
 @btn-default-color:              white;
@@ -10,6 +12,9 @@
 @btn-success-bg:                 #37B737;
 @btn-danger-bg:                  #D2322D;
 
+@link-color:                     #9342C9;
+
+@table-border-color:             #1F0E2B;
 
 .night .day-only {
   display: none !important;
@@ -32,6 +37,13 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'chunkfiveroman';
+}
+
+.well{
+  h1, h2, h3, h4, h5, h6 {
+    color: white;
+    text-shadow: 2px 2px 2px #383114;
+  }
 }
 
 body.js .js-hide {
@@ -109,6 +121,11 @@ main>.skrollable-after {
   background-position:50% 50%;
 }
 
+
+.btn.btn-block {
+  white-space: normal;
+}
+
 h1 {
   font-family: 'motion_picture_personal_useRg';
   color: white;
@@ -122,19 +139,10 @@ h1 {
 
 .white-text() {
   color: #ECECEC;
-  text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
 }
 .dark-text() {
   color: #333333;
-  text-shadow:
-    -1px -1px 0 #eee,
-    1px -1px 0 #eee,
-    -1px 1px 0 #eee,
-    1px 1px 0 #eee;
+  text-shadow: 2px 2px 2px #eeeeee, -2px -2px 2px #eeeeee;
 
   .btn{
     text-shadow: none;
@@ -209,6 +217,10 @@ h1 {
   .white-text();
   background-repeat: no-repeat;
   background-color: #E6537C;
+  .inner {
+    background-color: rgba(230, 83, 124, 0.7);
+    padding: 1em;
+  }
 }
 
 #taxis {
