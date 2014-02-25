@@ -4051,14 +4051,15 @@ h1 {
   background-position: 50% 50%;
   background-image: url("../img/reception.jpg");
   background-position: left center;
-  color: #333333;
-  text-shadow: 2px 2px 2px #eeeeee, -2px -2px 2px #eeeeee;
 }
 #reception h1 {
   color: white;
 }
-#reception .btn {
-  text-shadow: none;
+@media (max-width: 992px) {
+  #reception .inner {
+    background-color: rgba(180, 212, 181, 0.7);
+    padding: 1em;
+  }
 }
 #gifts {
   background-size: cover;

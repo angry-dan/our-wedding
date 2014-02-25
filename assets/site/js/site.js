@@ -1,6 +1,6 @@
 !function(){
 
-  if (!isMobile()) {
+  if (!allowSkrollr()) {
     var s = skrollr.init({
       scale: 15
     });
@@ -9,12 +9,14 @@
     });
   }
   else {
-    // If we're not using skrollr the least we can do is fill the elements on
-    // the page.
-    var height = window.document.documentElement.clientHeight;
-    $('section').css({
-      'min-height': height
-    });
+    $(function(){
+      // If we're not using skrollr the least we can do is fill the elements on
+      // the page.
+      var height = window.document.documentElement.clientHeight;
+      $('section').css({
+        'min-height': height
+      });
+    })
   }
 
   jQuery.fn.scope = function() {
@@ -25,7 +27,9 @@
   }
 
   jQuery(function($){
-    $('body').addClass('js');
+    $('body')
+      .removeClass('no-js')
+      .addClass('js');
 
     var $form = $('#rsvp form').scope();
     $form('.yes, .no').click(function(){
@@ -54,8 +58,8 @@
     });
   });
 
-  function isMobile() {
-    return (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
+  function allowSkrollr() {
+    return (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera) || $('html').hasClass('lt-ie9');
   }
 
 
