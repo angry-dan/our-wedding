@@ -2,10 +2,10 @@
 
   if (!allowSkrollr()) {
     var s = skrollr.init({
-      scale: 15
+      scale: 40
     });
     skrollr.menu.init(s, {
-      scale: 15
+      scale: 40
     });
   }
   else {
@@ -56,6 +56,15 @@
         console.log(data);
       }
     });
+
+    $('#pricekey').popover({
+      html: true,
+      placement: 'bottom',
+      title: $('#pricekey-data h3').text(),
+      content: $('#pricekey-data dl'),
+      container: 'body'
+    });
+    $('#pricekey-data').hide();
   });
 
   function allowSkrollr() {
