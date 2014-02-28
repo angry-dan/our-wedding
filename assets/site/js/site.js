@@ -62,7 +62,7 @@
       placement: 'bottom',
       title: $('#pricekey-data h3').text(),
       content: $('#pricekey-data dl'),
-      container: 'body'
+      container: '#hotels .well'
     });
     $('#pricekey-data').hide();
   });
