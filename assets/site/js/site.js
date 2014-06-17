@@ -46,6 +46,11 @@
 
     $form().ajaxForm({
       beforeSubmit: function() {
+        
+        // Bit of Google Analytics tracking, before we start in case I'm missing errors.
+        var going = $form('.yes, .no').next(':checked').val();
+        ga('send', 'event', 'rsvp', 'submit', going);
+        
         $form('button[type=submit]').append(
           ' <span class="glyphicon glyphicon-refresh spin" style="transform: translate(-2px, 0px);"></span>'
         );
@@ -53,7 +58,6 @@
       complete: function(data, status, form) {
         $('.glyphicon-refresh', form).remove();
         $(form).slideUp().after('<p class="text-success text-center lead">Thanks, all received!</p>');
-        console.log(data);
       }
     });
 
