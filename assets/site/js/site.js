@@ -45,6 +45,7 @@
     });
 
     $form().ajaxForm({
+      iframe: true,
       beforeSubmit: function() {
         
         // Bit of Google Analytics tracking, before we start in case I'm missing errors.
